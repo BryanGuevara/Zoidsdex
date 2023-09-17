@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+:root {
+    --liger-color: #FFA500; /* Color característico de los Liger Zoids (naranja) */
+    --dinosaur-color: #008000; /* Color característico de los Dinosaur Zoids (verde oscuro) */
+    --bird-color: #0000FF; /* Color característico de los Bird Zoids (azul) */
+    --insect-color: #FF00FF; /* Color característico de los Insect Zoids (magenta) */
+    --mammal-color: #8B4513; /* Color característico de los Mammal Zoids (marrón) */
+    --aquatic-color: #00FFFF; /* Color característico de los Aquatic Zoids (azul claro) */
+    --amphibious-color: #008000; /* Color característico de los Amphibious Zoids (verde) */
+    --mechanical-insect-color: #C0C0C0; /* Color característico de los Mechanical Insects (plateado) */
+    --organoid-color: #000000; /* Color característico de los Organoid Zoids (negro) */
+    --custom-color: #FFFFFF; /* Color para Custom Zoids (puedes ajustar este color según sea necesario) */
+  
+    --color-primary: #006d77;
+    --color-primary-hover: #83c5be;
+ }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat';
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.logo img{
+    width: 150px;
+}
+
+header form{
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px solid #5555;
+    padding: 15px 20px;
+    border-radius: 25px;
+}
+
+.form-group input{
+    font-family: inherit;
+    width: 300px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.icon-search{
+    width: 20px;
+    height: 20px;
+    stroke: #5555;
+}
+
+.btn-search{
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-family: inherit;
+    padding: 15px 30px;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+.btn-search:hover{
+    background-color: var(--color-primary-hover);
+    color: #000;
+}
+
+.container-filter{
+    display: flex;
+}
+
+.iconfilter{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.iconfilter .icon{
+    width: 30px;
+    height: 30px;
+    stroke: #555;
+}
+
+.card-list-zoids{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 60%;
+}
+
+.card-zoid{
+    cursor: pointer;
+    text-decoration: none;
+    justify-content: center;
+    border-radius: 5px;
+}
+.card-img{
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    height: 250px;
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+}
+.card-info{
+    padding: 15px;
+}
+.card-info h3{
+    color: #333;
+}
+.zoid-id{
+    display: block;
+    color: #888;
+    margin-bottom: 15px;
+}
+.card-types{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.zoid-types span{
+    font-size: 12px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: #ffff;
+}
+.liger {
+    background-color: var(--liger-color); /* Color de fondo para los Liger Zoids */
+}
+
+.dinosaur {
+    background-color: var(--dinosaur-color); /* Color de fondo para los Dinosaur Zoids */
+}
+
+.bird {
+    background-color: var(--bird-color); /* Color de fondo para los Bird Zoids */
+}
+
+.insect {
+    background-color: var(--insect-color); /* Color de fondo para los Insect Zoids */
+}
+
+.mammal {
+    background-color: var(--mammal-color); /* Color de fondo para los Mammal Zoids */
+}
+
+.aquatic {
+    background-color: var(--aquatic-color); /* Color de fondo para los Aquatic Zoids */
+}
+
+.amphibious {
+    background-color: var(--amphibious-color); /* Color de fondo para los Amphibious Zoids */
+}
+
+.mechanical-insect {
+    background-color: var(--mechanical-insect-color); /* Color de fondo para los Mechanical Insects */
+}
+
+.organoid {
+    background-color: var(--organoid-color); /* Color de fondo para los Organoid Zoids */
+}
+
+.custom {
+    background-color: var(--custom-color); /* Color de fondo para los Custom Zoids */
+}
+
+.container-filters{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 250px;
+    color: #555;
+    background-color: #f2f2f2;
+    height: 100%;
+    padding-top: 140px;
+    transition: all .3s linear;
+    left: -300px;
+}
+
+.container-filters.active{
+    left: 0;
+}
+.filter-by-type{
+  display: flex;
+  flex-direction: column;
+  
+  gap: 20px;
+}
+
+.filter-by-type span{
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.group-type{
+    display: flex;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.group-type label{
+    cursor: pointer;
+}
+
+.main-zoid{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.header-main-zoid{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.container-img-zoid{
+flex: 1;
+order: 2;
+padding: 25px 25px 25px 0;
+}
+
+.container-img-zoid img{
+    width: 400px;
+    height: 400px;
+}
+.container-info-zoid{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    order: 1;
+}
+.container-info-zoid h1{
+    top: -70px;
+    left: 0;
+    font-size: 150px;
+    color: var(--color-command-wolf);
+}
+
+.info-zoid{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.group-info p{
+    font-weight: 700;
+}
+
+.container-stats{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.stat-group{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.stat-group span{
+    flex: 20;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 30px;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+}
